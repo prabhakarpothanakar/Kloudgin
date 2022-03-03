@@ -1,0 +1,94 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TC_002_OperatingArea_Organization" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="870,1080" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:kl="clr-namespace:KloudginLibrary.Libraries;assembly=KloudginLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>ReporterForUiPath.Enums</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>ReporterForUiPath.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>KloudginLibrary.Libraries</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.Activities</AssemblyReference>
+      <AssemblyReference>KloudginLibrary</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="418,1015" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="376,923" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ra:StartSuite ContinueOnError="{x:Null}" suiteList="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="StartSuite_1" SuiteName="Suite 2" />
+      <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" testList="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Low" TestName="Organization Creation" />
+      <ui:ReadRow Result="{x:Null}" DisplayName="Read Row" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRow_1" SheetName="CompanyCreation" StartingCell="A2" WorkbookPath="Testdata\Automation Steps.xlsx" />
+      <kl:LoginLibrary sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="LoginLibrary_1" />
+      <kl:CompanyLibrary TypeCompany="{x:Null}" Company="Company" CompanyFilter="Company" FilterName="ABC Org 1" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="CompanyLibrary_1" SearchDashboards="Organizations" SelectLevel="Company" Source="Kloudgin" Sourcecode="AU-COMP-001" TypeCode="AU-COMP-001">
+        <kl:CompanyLibrary.Exist>
+          <InArgument x:TypeArguments="x:Boolean" />
+        </kl:CompanyLibrary.Exist>
+        <kl:CompanyLibrary.Today>
+          <InArgument x:TypeArguments="x:String" />
+        </kl:CompanyLibrary.Today>
+      </kl:CompanyLibrary>
+      <kl:Filter CompanyFilter="Company" FilterName="ABC Org 1" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Filter_1" SelectLevel="Company" />
+      <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" testList="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="StartTest_2" Priority="Low" TestName="Zone Creation" />
+      <kl:OperatingAreaLibrary Code="AU-COMP-001" CompanyName="ABC Org 1" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OperatingAreaLibrary_1" OperatingArea="Company Opr Area 78" OperatingFilter="Operating Area" Operating_Area="Operating Area" SearchDashboards="Organizations" Source="Kloudgin" Sourcecode="AU-OA-001" TypeCode="AU-OA-001">
+        <kl:OperatingAreaLibrary.Exist>
+          <InArgument x:TypeArguments="x:Boolean" />
+        </kl:OperatingAreaLibrary.Exist>
+        <kl:OperatingAreaLibrary.Today>
+          <InArgument x:TypeArguments="x:String" />
+        </kl:OperatingAreaLibrary.Today>
+        <kl:OperatingAreaLibrary.TypeCompany>
+          <InArgument x:TypeArguments="x:String" />
+        </kl:OperatingAreaLibrary.TypeCompany>
+      </kl:OperatingAreaLibrary>
+      <kl:Filter CompanyFilter="Company" FilterName="ABC Org 1" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Filter_2" SelectLevel="Company" />
+      <kl:Logout sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Logout_1" />
+    </Sequence>
+  </Sequence>
+</Activity>
